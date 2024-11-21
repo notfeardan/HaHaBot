@@ -1,8 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+Vinyl&family=Silkscreen:wght@400;700&family=Slackey&display=swap");
+
 html {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  min-height: 100vh;
+  background-color: white;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("./hahabot.gif");
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  width: 225px;
+  height: 50px;
+  font-family: "Slackey", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(226, 107, 107);
+  background: rgb(90, 238, 176);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  filter: brightness(95%);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+button:disabled {
+  cursor: default;
+  filter: brightness(35%);
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  button {
+    box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.2);
+  }
 }
