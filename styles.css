@@ -22,6 +22,13 @@ body {
   background-repeat: no-repeat;
 }
 
+h3 {
+  font-family: "Slackey", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(65, 65, 65);
+}
+
 button {
   cursor: pointer;
   outline: none;
@@ -50,6 +57,34 @@ button:disabled {
   filter: brightness(35%);
 }
 
+.social-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-btn {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Slackey", sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  color: rgb(226, 107, 107);
+  background: rgb(90, 238, 176);
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.social-btn i {
+  margin-right: 8px;
+}
+
+.social-btn:hover {
+  filter: brightness(95%);
+}
+
 @media screen and (max-width: 1000px) {
   .container {
     background-size: cover;
@@ -60,5 +95,10 @@ button:disabled {
   button {
     box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.2);
     font-size: 1rem;
+  }
+
+  .social-btn {
+    font-size: 14px;
+    padding: 8px 16px;
   }
 }
