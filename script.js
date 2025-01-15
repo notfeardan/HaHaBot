@@ -6,6 +6,8 @@ function toggleButton() {
 }
 
 function tellMe(joke) {
+  document.getElementById("joke-text").textContent = joke;
+
   VoiceRSS.speech({
     key: "cd6582a7a8034847b855dae8cd51d532",
     src: joke,
@@ -39,3 +41,9 @@ async function getJokes() {
 
 button.addEventListener("click", getJokes);
 audioElement.addEventListener("ended", toggleButton);
+audioElement.addEventListener("play", function () {
+  button.disabled = true;
+});
+audioElement.addEventListener("ended", function () {
+  button.disabled = false;
+});

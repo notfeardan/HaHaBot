@@ -20,6 +20,7 @@ body {
   background-size: contain;
   background-position: left center;
   background-repeat: no-repeat;
+  background-color: #ffffff;
 }
 
 h3 {
@@ -83,6 +84,28 @@ button:disabled {
 
 .social-btn:hover {
   filter: brightness(95%);
+}
+
+#joke-text {
+  font-family: "Slackey", sans-serif;
+  font-size: 1.5rem;
+  color: rgb(65, 65, 65);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  max-width: 80%;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+#joke-text:hover {
+  transform: scale(1.05);
+}
+
+#joke-text:empty {
+  display: none;
 }
 
 @media screen and (max-width: 1000px) {
